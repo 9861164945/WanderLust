@@ -1,0 +1,157 @@
+body {
+    background-color: #f4f4f4!important;
+    font-family: Arial, sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background:url('../css/image/pexels-emiliano-morales-1648890134-27674514.jpg') !important;
+}
+
+/* Navbar */
+.navbar {
+    height: 5rem;
+    background: repeating-conic-gradient(
+        white 15%,
+        yellow 15%,
+        red 33%
+    );
+}
+.fa-compass {
+    color: red;
+    font-size: 2rem;
+}
+.nav-link {
+    color: black !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: black;
+}
+.f-info-links:hover {
+    text-decoration: underline;
+}
+.f-info-links, .f-info-socials {
+    width: 100%;
+}
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Fixed */
+}
+
+/* Home test */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.logo {
+    font-size: 2rem;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.hero {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+.hero button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.hero button:hover {
+    background-color: #555;
+}
+.rooms, .amenities, .contact {
+    padding: 20px;
+    text-align: center;
+}
+.rooms .room {
+    margin-bottom: 20px;
+}
+.amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+.amenities li {
+    margin-bottom: 10px;
+}
+.contact p {
+    margin: 5px 0;
+}
+footer {
+    background-color: #333;
+    color:#333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Card Component */
+.listing-card {
+    border: 2px solid black;
+    margin-bottom: 2rem;
+    border-radius: 15%;
+}
+.card-img-top {
+    border-radius: 2rem;
+    width: 100%;
+    object-fit: cover;
+}
+.card-body {
+    padding: 0;
+}
+.card-text {
+    font-weight: 400;
+}
+.card-text p{
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* Card Effect*/
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color: rgb(245, 45, 189) !important;
+}
+/* showimage */
+
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
