@@ -31,7 +31,8 @@ body {
 .f-info-links:hover {
     text-decoration: underline;
 }
-.f-info-links, .f-info-socials {
+.f-info-links, .f-info-socials 
+{
     width: 100%;
 }
 .f-info-socials i {

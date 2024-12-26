@@ -24,7 +24,7 @@ router.get("/", isLoggedIn ,async (req, res) => {
 
 // New Route
 router.get("/new",isLoggedIn, (req, res) => {
-  //alert("New Listing Added Succesfully");
+  // alert("New Listing Added Succesfully");
  res.render("listings/new.ejs");
 });
 
@@ -32,17 +32,18 @@ router.get("/new",isLoggedIn, (req, res) => {
 router.get("/:id", wrapAsync(async (req, res) => {
   let { id } = req.params;
   const listing = await Listing.findById(id).populate("reviews");
-  //const show=await Listing.findById.populate("owner");
-  //console.log(show);
+  
 
   res.render("listings/show.ejs", { listing });
   console.log(listing);
 }));
 
 // Create Route
-router.post("/",isLoggedIn, validateListing, wrapAsync(async (req, res, next) => {
+router.post("/",isLoggedIn, validateListing, wrapAsync(async (req, res, next) =>
+   {
   let result = listingSchema.validate(req.body);
-  if (result.error) {
+  if (result.error) 
+    {
     throw new ExpressError(400, result.error);
   }
   const newListing = new Listing(req.body.listing);
@@ -52,13 +53,15 @@ router.post("/",isLoggedIn, validateListing, wrapAsync(async (req, res, next) =>
 }));
 
 // Edit Route
-router.get("/:id/edit", wrapAsync(async (req, res) => {
+router.get("/:id/edit", wrapAsync(async (req, res) => 
+  {
   let { id } = req.params;
   const listing = await Listing.findById(id);
   req.flash("succcess","Listing Edited");
   //alert("Listing Edited Succesfully");
   res.render("listings/edit.ejs", { listing });
-}));
+}
+));
 
 // Update Route
 router.put("/:id",isLoggedIn, validateListing, wrapAsync(async (req, res) => {
