@@ -14,8 +14,12 @@ const ExpressError = require("./utils/ExpressError.js");
 const listingRouter = require("./routes/listingRoute.js");
 const reviewRouter = require("./routes/reviewRoute.js");
 const userRouter=require('./routes/userRoute.js');
+const dotenv=require('dotenv');
+const port=process.env.PORT||8080;
+dotenv.config();
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/Wanderlust";
+
+const MONGO_URL =process.env.MONGODB_URI;
 
 // Connect to MongoDB
 main()
@@ -80,21 +84,10 @@ app.use((req, res, next) => {
   res.locals.currUser=req.user;
   next();
 });
-
-// //Demo User
-// app.get("/demouser",async(req,res)=>{
-//   let fakeUser=new User({
-//     email:"sambit@gmail.com",
-//     username:"Sambit"
-//   });
-//   let registeredUser=await User.register(fakeUser,"Sambit");//Register is a Static method in npm Passport
-//   res.send(registeredUser);
-// })
-
 // Home Route
-app.get("/", (req, res) => {
-  res.render("listings/home.ejs");
-});
+// app.get("/", (req, res) => {
+//   res.render("listings/home.ejs");
+// });
 
 // Example Route that Sets Flash Message
 app.post('/listings', (req, res) => {
@@ -121,6 +114,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-app.listen(8080, () => {
+app.listen(port, () => {
   console.log("Server is listening on port 8080");
 });

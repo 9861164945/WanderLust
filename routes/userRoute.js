@@ -14,7 +14,7 @@ router.post("/signup", async (req, res) => {
     
     try {
         const registeredUser = await User.register(newUser, password); // Call register with the user instance and password
-        req.flash("success", "User registered successfully! Welcome to Wanderlust");
+        req.flash("success", "User Registered successfully! Welcome to Wanderlust");
         res.redirect("/");
     } catch (e) {
         console.log(e);

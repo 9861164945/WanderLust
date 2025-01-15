@@ -21,7 +21,7 @@
               <br>
               <%= listing.country %>
             </p>
-          </div>
+                      </div>
           <div class="card-footer btns">
             <div class="row">
               <div class="col-6">
@@ -32,11 +32,12 @@
                   <button class="btn btn-dark w-100">Delete</button>
                 </form>
               </div>
+              
             </div>
           </div>
         </div>
       </div>
-
+<!--  Review Form-->
       <div class="col-12 col-md-4 mb-4">
         <div class="card h-100">
           <div class="card-body">
@@ -58,13 +59,13 @@
           </div>
         </div>
       </div>
-
+<!--Display Review-->
       <div class="col-12 col-md-4 mb-4">
         <div class="card h-100">
           <div class="card-body">
             <h4 class="card-title">All Reviews</h4>
             <div class="row">
-              <% for(review of listing.reviews){ %>
+              <% for(let review of listing.reviews){ %>
                 <div class="col-12 mb-3">
                   <div class="card">
                     <div class="card-body">

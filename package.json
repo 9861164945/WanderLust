@@ -4,13 +4,15 @@
   "description": "this is a project  like AIRNB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "author": "Sambit Kumar Swain",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.19.2",
